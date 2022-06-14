@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <header>
-        <nav>
-            <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/list">View list</a></li>
-        </nav>
-    </header>
+<%- include('partials/header') %>
     
-    <h1>List Page</h1>
-</body>
-</html>
+    <h1> <%= title %> Page</h1>
+    
+    <!-- creating variable-->
+    <% let name = 'Dickson Kiptoo' %>
+
+    <!-- display output -->
+    <%= `Dickson Kiptoo has ${name.length} characters` %>
+
+    <ol>
+        <% for(let item of list){ %>
+            <li><%= item %></li>    
+        <% } %>
+    </ol>
+
+    <!-- conditional branching -->
+    <% let error = false %>
+
+    <% if(error) { %>
+        <p>there is an error</p>
+    <% } else { %>
+        <p>there is no error</p>
+    <% }%>
+
+<%- include('partials/footer') %>
