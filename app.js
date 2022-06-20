@@ -18,17 +18,18 @@ app.get('/', (req, res) => {
 app.get('/list', (req, res) => {
     let title = 'List'
     const list = [
-        'Wake up',
-        'Read a book',
-        'Take a shower',
-        'Prepare breakfast',
-        'Open VS Code'
+        'Brown Bread',
+        '2Kgs of Sugar',
+        'Coffee',
+        'Fresh Fri Cooking Oil',
+        'Soko Ugali - 10Kgs'
     ]
     res.render('list', {title: title, list: list})
 })
 
 // 404 Error
 app.get('*',(req,res) => {
+    let title = 'Page Not Found'
     res.render('404')
 })
 
