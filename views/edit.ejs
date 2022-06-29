@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+<%- include('partials/nav') %> 
+
+<main id="edit-item">
+    <h1>Edit item</h1>
+    <form action=" /edit/<%- list.id %> " method="post">
+        <input type="text" name="item" id="" value=" <%- list.item %> ">
+        <div>
+            <a href="/list">Cancel</a>
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</main>
+
+<%- include('partials/footer') %> 
