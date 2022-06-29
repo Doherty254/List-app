@@ -1,10 +1,8 @@
 <%- include('partials/header') %>
     
-   <header>
-    <nav>
-        <a href="/">LISt</a>
-    </nav>
-   </header>
+   <%- include('partials/header') %>
+   
+   <%- include('partials/nav') %> 
 
    <main id="list-home">
         <form action="/add-item" method="POST">
@@ -15,7 +13,13 @@
 
             <% list.forEach(item => { %>
 
-                <p><%= item %></p>
+                <div class="item">
+                    <p> <%= item.item %> </p>
+                    <div id="btns">
+                        <a href="/edit/<%= item.id %>" id="edit">Edit</a> 
+                        <a href="/delete/<%= item.id %>" id="delete">Delete</a>
+                    </div>
+                </div>
 
             <% }) %>
 
